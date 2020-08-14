@@ -16,10 +16,11 @@ Once the creation complete, commit and push.
 
 * from the command line, run the program with a URL. `noq "https://nytimes.com"`
 * read the HTML page from the URL over HTTP into a large string `body`
-* scan thru finding all URLs on the page and placing them into a list of URLs tobe visited
-* remove all the HTML tags from the body
+* scan thru the body finding all URLs on the page and placing them into a list of URLs to be visited
+* remove all the HTML tags from the body (or ignore them when you scan in the next step)
 * scan thru the body, creating a hashmap (word_table) of `<string, Node>`
-* after its thru scanning, output the hashmap and the URL-list as JSON so it could be used in the future
+* make sure to drop all the words found in the Stop List file.
+* after thru scanning the words, output the hashmap and the URL-list as JSON so it could be used in the future
 
 ### Node
 
