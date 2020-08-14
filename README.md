@@ -14,6 +14,8 @@ Once the creation complete, commit and push.
 
 ### Requirements
 
+* feel free to look for libraries that help with JSON, URL fetching, and tag removal (or ignoring them)
+* make sure the libraries are part of your pom.xml
 * from the command line, run the program with a URL. `noq "https://nytimes.com"`
 * read the HTML page from the URL over HTTP into a large string `body`
 * scan thru the body finding all URLs on the page and placing them into a list of URLs to be visited
