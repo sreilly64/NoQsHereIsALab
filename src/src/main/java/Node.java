@@ -6,10 +6,11 @@ public class Node {
     private Integer occurrences;
     private ArrayList<Integer> offsets;
 
-    public Node(String word){
+    public Node(String word, Integer offset){
         this.word = word;
         this.occurrences = 1;
         this.offsets = new ArrayList<>();
+        this.offsets.add(offset);
     }
 
     public String getWord() {
@@ -32,7 +33,16 @@ public class Node {
         return offsets;
     }
 
-    public void setOffsets(ArrayList<Integer> offsets) {
-        this.offsets = offsets;
+    public void addOffset(Integer offset) {
+        this.offsets.add(offset);
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "word='" + word + '\'' +
+                ", occurrences=" + occurrences +
+                ", offsets=" + offsets +
+                '}';
     }
 }
